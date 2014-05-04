@@ -68,54 +68,20 @@ class CubePanel extends Component with Publisher {
     -1.0f, -1.0f, 1.0f)
   val normals = Array(
     0f, 0f, -1f, // Back face
-    0f, 0f, -1f,
-    0f, 0f, -1f,
-    0f, 0f, -1f,
     -1f, 0f, 0f, // Left face
-    -1f, 0f, 0f, 
-    -1f, 0f, 0f, 
-    -1f, 0f, 0f, 
     0f, 0f, 1f, // Front face
-    0f, 0f, 1f,
-    0f, 0f, 1f,
-    0f, 0f, 1f,
     1f, 0f, 0f, // Right face
-    1f, 0f, 0f,
-    1f, 0f, 0f,
-    1f, 0f, 0f,
     0f, 1f, 0f, // Top face
-    0f, 1f, 0f,
-    0f, 1f, 0f,
-    0f, 1f, 0f,
-    0f, -1f, 0f, // Bottom face
-    0f, -1f, 0f,
-    0f, -1f, 0f,
-    0f, -1f, 0f)
+    0f, -1f, 0f // Bottom face
+  ).sliding(3, 3).map(x => Array.fill(4)(x)).toArray.flatten.flatten
   val colors = Array(
     0f, 0f, 1f, // Back face
-    0f, 0f, 1f,
-    0f, 0f, 1f,
-    0f, 0f, 1f,
     1f, 0f, 0f, // Left face
-    1f, 0f, 0f,
-    1f, 0f, 0f,
-    1f, 0f, 0f,
     0f, 1f, 0f, // Front face
-    0f, 1f, 0f,
-    0f, 1f, 0f,
-    0f, 1f, 0f,
     1f, 1f, 0f, // Right face
-    1f, 1f, 0f,
-    1f, 1f, 0f,
-    1f, 1f, 0f,
     1f, 0f, 1f, // Top face
-    1f, 0f, 1f,
-    1f, 0f, 1f,
-    1f, 0f, 1f,
-    0f, 1f, 1f, // Bottom face
-    0f, 1f, 1f,
-    0f, 1f, 1f,
-    0f, 1f, 1f)
+    0f, 1f, 1f // Bottom face
+  ).sliding(3, 3).map(x => Array.fill(4)(x)).toArray.flatten.flatten
   val indices = Array(
     0, 1, 2,    // Back face
     2, 3, 0,
