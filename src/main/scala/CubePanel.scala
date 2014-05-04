@@ -75,12 +75,12 @@ class CubePanel extends Component with Publisher {
     0f, -1f, 0f // Bottom face
   ).sliding(3, 3).map(x => Array.fill(4)(x)).toArray.flatten.flatten
   val colors = Array(
-    0f, 0f, 1f, // Back face
-    1f, 0f, 0f, // Left face
-    0f, 1f, 0f, // Front face
-    1f, 1f, 0f, // Right face
-    1f, 0f, 1f, // Top face
-    0f, 1f, 1f // Bottom face
+    0.105882353f, 0.619607843f, 0.466666667f, // Back face
+    0.850980392f, 0.372549020f, 0.007843137f, // Left face
+    0.458823529f, 0.439215686f, 0.701960784f, // Front face
+    0.905882353f, 0.160784314f, 0.541176471f, // Right face
+    0.400000000f, 0.650980392f, 0.117647059f, // Top face
+    0.901960784f, 0.670588235f, 0.007843137f // Bottom face
   ).sliding(3, 3).map(x => Array.fill(4)(x)).toArray.flatten.flatten
   val indices = Array(
     0, 1, 2,    // Back face
