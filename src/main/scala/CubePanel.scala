@@ -11,7 +11,7 @@ import com.jogamp.common.nio.Buffers
 import com.jogamp.opengl.util.FPSAnimator
 import com.jogamp.opengl.util.glsl.ShaderUtil
 
-case class AngleUpdate(source:Component, deltaX:Float, deltaX:Float)
+case class AngleUpdate(source:Component, deltaX:Float, deltaY:Float)
   extends ComponentEvent
 
 class CubePanel extends Component with Publisher {
