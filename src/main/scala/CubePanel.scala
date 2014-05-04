@@ -248,7 +248,7 @@ class CubePanel extends Component with Publisher {
     // Do the draw
     gl.glBindBuffer(GL.GL_ELEMENT_ARRAY_BUFFER, indexBuffer)
     gl.glDrawElements(GL.GL_TRIANGLES, indices.size, GL.GL_UNSIGNED_INT, 0)
-    //gl.glDrawElements(GL.GL_TRIANGLES, 3, GL.GL_UNSIGNED_INT, 0)
+    //gl.glDrawElements(GL.GL_TRIANGLES, 6, GL.GL_UNSIGNED_INT, 0)
   }
 
   protected def createShader(gl:GL2ES2, typeId:Int, source:String) = {
