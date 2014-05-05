@@ -40,13 +40,16 @@ void main() {
 
   mat4 scale = mat4(mat2(scale.x, 0.0, 0.0, scale.y)) *
                mat4(mat3(0.5));
+  mat3 invScale = mat3(1.0/scale[0][0], 0.0, 0.0,
+                       0.0, 1.0/scale[1][1], 0.0,
+                       0.0, 0.0, 1.0/scale[2][2]);
 
   // convert degrees to radians
   vec3 rotation = rotation / 360.0 * 2.0 * 3.14159;
   mat4 rotate = rotX(rotation.x) * rotY(rotation.y) * rotZ(rotation.z);
 
   mat4 trans = scale * rotate;
-  mat3 normTrans = mat3(rotate);
+  mat3 normTrans = transpose(transpose(mat3(rotate)) * invScale);
 
   fragColor = color;
   fragNormal = normalize(normTrans * normal);
