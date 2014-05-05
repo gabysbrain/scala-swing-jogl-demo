@@ -42,34 +42,34 @@ class CubePanel extends Component with Publisher {
 
   // Geometry, etc for the cube
   val vertices = Array(
-    -1.0f, -1.0f, -1.0f, // Back face
+    -1.0f, -1.0f, 1.0f, // Back face
+    -1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f, -1.0f, 1.0f,
+    -1.0f, -1.0f, 1.0f, // Left face
+    -1.0f, -1.0f, -1.0f,
     -1.0f, 1.0f, -1.0f,
+    -1.0f, 1.0f, 1.0f,
+    -1.0f, -1.0f, -1.0f, // Front face
+    1.0f, -1.0f, -1.0f,
+    1.0f, 1.0f, -1.0f,
+    -1.0f, 1.0f, -1.0f,
+    1.0f, -1.0f, 1.0f, // Right face
+    1.0f, 1.0f, 1.0f,
     1.0f, 1.0f, -1.0f,
     1.0f, -1.0f, -1.0f,
-    -1.0f, -1.0f, -1.0f, // Left face
-    -1.0f, -1.0f, 1.0f,
-    -1.0f, 1.0f, 1.0f,
+    -1.0f, 1.0f, 1.0f, // Top face
     -1.0f, 1.0f, -1.0f,
-    -1.0f, -1.0f, 1.0f, // Front face
-    1.0f, -1.0f, 1.0f,
-    1.0f, 1.0f, 1.0f,
-    -1.0f, 1.0f, 1.0f,
-    1.0f, -1.0f, -1.0f, // Right face
     1.0f, 1.0f, -1.0f,
     1.0f, 1.0f, 1.0f,
+    -1.0f, -1.0f, 1.0f, // Bottom face
     1.0f, -1.0f, 1.0f,
-    -1.0f, 1.0f, -1.0f, // Top face
-    -1.0f, 1.0f, 1.0f,
-    1.0f, 1.0f, 1.0f,
-    1.0f, 1.0f, -1.0f,
-    -1.0f, -1.0f, -1.0f, // Bottom face
     1.0f, -1.0f, -1.0f,
-    1.0f, -1.0f, 1.0f,
-    -1.0f, -1.0f, 1.0f)
+    -1.0f, -1.0f, -1.0f)
   val normals = Array(
-    0f, 0f, -1f, // Back face
+    0f, 0f, 1f, // Back face
     -1f, 0f, 0f, // Left face
-    0f, 0f, 1f, // Front face
+    0f, 0f, -1f, // Front face
     1f, 0f, 0f, // Right face
     0f, 1f, 0f, // Top face
     0f, -1f, 0f // Bottom face
