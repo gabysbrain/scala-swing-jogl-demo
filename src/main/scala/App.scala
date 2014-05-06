@@ -39,8 +39,8 @@ object App extends SimpleSwingApplication {
       case ValueChanged(`zAngle`) =>
         cube.zAngle = zAngle.value.toFloat
       case AngleUpdate(`cube`, deltaX, deltaY) =>
-        xAngle.value += deltaX.toInt
-        yAngle.value += deltaY.toInt
+        xAngle.value = (xAngle.value + deltaX.toInt) % 360
+        yAngle.value = (yAngle.value + deltaY.toInt) % 360
     }
   }
 
